@@ -1,0 +1,80 @@
+@import "../styles";
+
+.main-header-section {
+  display: flex;
+  color: #b2b2b2;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 0px 30px;
+}
+
+.logo-section {
+  cursor: pointer;
+}
+
+.main-header-divider hr {
+  transform: rotate(90deg);
+  width: 2rem;
+  border-radius: 40px;
+  background-color: #303034;
+  color: #303034;
+  outline: none;
+}
+
+.log-nav-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.store-logo {
+  transform: translateY(-1px);
+}
+
+.main-header-section ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 2rem;
+  padding: 0;
+}
+
+.main-header-section ul li {
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 300ms ease;
+}
+
+.main-header-section ul li:hover {
+  background-color: #404044;
+  color: white;
+
+}
+
+
+nav li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-preferences {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-preferences a {
+  text-decoration: none;
+}
+
+.download-button-nav {
+  cursor: pointer;
+  color: black;
+  background-color: $secondaty-color;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
