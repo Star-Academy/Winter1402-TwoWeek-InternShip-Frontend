@@ -172,6 +172,67 @@ main {
   }
 }
 
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: $distance-with-top-section;
+  padding: 0 5rem;
+  header {
+    color: white;
+    font-size: 40px;
+  }
+  .full-game-list {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    gap: 35px;
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      height: 340px;
+      border-radius: 15px;
+      background-color: inherit;
+      color: whitesmoke;
+
+      img {
+        margin-bottom: 15px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .price-desc {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        .discount {
+          padding: 10px;
+          font-size: 14px;
+          background-color: #61cdff;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.card {
+    img {
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+      border-radius: 13px 13px 0 0;
+    }
+}
+
 fa-icon {
   cursor: pointer;
   color: #d7d7d7;
