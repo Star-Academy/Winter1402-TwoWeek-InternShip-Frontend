@@ -1,11 +1,21 @@
 @import "../styles";
 
+.header {
+  padding: 0 3rem;
+  background: rgb(18,18,18);
+  background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 42%, rgba(97,205,255,0.13209033613445376) 100%);
+  backdrop-filter: blur(2.5rem);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-size: 1.5rem;
+}
+
 .main-header-section {
   display: flex;
   color: #b2b2b2;
   align-items: center;
-  background-color: $primary-color;
-  padding: 0px 30px;
+  width: 100%;
 }
 
 .logo-section {
@@ -15,7 +25,7 @@
 .main-header-divider hr {
   transform: rotate(90deg);
   width: 2rem;
-  border-radius: 40px;
+  border-radius: 4rem;
   background-color: #303034;
   color: #303034;
   outline: none;
@@ -24,15 +34,15 @@
 .log-nav-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 2rem;
   input {
-    padding: 12px 20px;
+    padding: 1.2rem 2rem;
     background-color: #202020;
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     color: whitesmoke;
-    font-size: 15px;
+    font-size: $global-font-size;
   }
 }
 
@@ -49,8 +59,8 @@
 }
 
 .main-header-section ul li {
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
   transition: background-color 300ms ease;
 }
 
@@ -81,34 +91,42 @@ nav li a {
   cursor: pointer;
   color: black;
   background-color: $secondaty-color;
-  font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 6px;
+  //font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.6rem;
   border: none;
   outline: none;
 }
 
 main {
   .banner {
-    margin-top: $distance-with-top-section + 50px;
+    margin-top: $distance-with-top-section;
     display: inline-flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
-    gap: 40px;
+    gap: 4rem;
+    font-size: $global-font-size;
+    @media screen and (max-width: 1400px) {
+      flex-direction: column;
+    }
     .slideshow {
       position: relative;
-      width: 70%;
+      width: 80%;
+        @media screen and (max-width: 1000px) {
+          width: 100%;
+        }
       img {
         width: 100%;
         height: 80vh;
         object-fit: cover;
-        border-radius: 20px;
+        border-radius: 2rem;
       }
       #rightArrow {
         position: absolute;
         top: 50%;
         bottom: 50%;
-        right: 10px;
+        right: 1rem;
         transition: all 300ms ease;
         &:hover {
           scale: 1.05;
@@ -118,7 +136,7 @@ main {
       #leftArrow {
         position: absolute;
         top: 50%;
-        left: 10px;
+        left: 1rem;
         transition: all 300ms ease;
         &:hover {
           scale: 1.05;
@@ -127,20 +145,30 @@ main {
       footer {
         position: absolute;
         display: flex;
-        gap: 4px;
+        gap: 0.4rem;
         right: 50%;
         left: 50%;
-        bottom: 10px;
+        bottom: 1rem;
       }
     }
 
     .aside-games {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      width: 10%;
+      gap: 2rem;
+      width: auto;
+      overflow-x: auto;
       :first-child {
         background-color: rgba(183, 183, 183, 0.20) !important;
+      }
+
+      @media screen and (max-width: 1000px) {
+        //visibility: hidden;
+      }
+
+      @media screen and (max-width: 1400px) {
+        flex-direction: row;
+        width: 100%;
       }
 
       .game-mini-cards {
@@ -148,11 +176,11 @@ main {
         justify-content: flex-start;
         align-items: center;
         width: auto;
-        gap: 20px;
+        gap: 2rem;
         color: whitesmoke;
         cursor: pointer;
-        border-radius: 20px;
-        padding: 15px;
+        border-radius: 2rem;
+        padding: 1.5rem;
         &:hover {
           background-color: rgba(183, 183, 183, 0.40);
           img {
@@ -161,10 +189,10 @@ main {
           }
         }
         img {
-          width: 30%;
+          width: 7rem;
           height: auto;
-          object-fit: contain;
-          border-radius: 12px;
+          object-fit: cover;
+          border-radius: 1.2rem;
 
         }
       }
@@ -175,14 +203,21 @@ main {
 .suggestions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   justify-content: center;
   align-items: center;
+  width: 100%;
   margin-top: $distance-with-top-section;
-  padding: 0 5rem;
+  gap: 1rem;
+  font-size: $global-font-size;
   header {
     color: white;
-    font-size: 40px;
+    font-size: 4rem;
+  }
+  .slider-controller {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: flex-end;
   }
   .full-game-list {
     display: flex;
@@ -191,18 +226,18 @@ main {
     align-items: center;
     width: 100%;
     flex-direction: row;
-    gap: 35px;
+    gap: 3.5rem;
     .card {
       display: flex;
       flex-direction: column;
-      width: 250px;
-      height: 340px;
-      border-radius: 15px;
+      width: 25rem;
+      height: 34rem;
+      border-radius: 1.5rem;
       background-color: inherit;
       color: whitesmoke;
 
       img {
-        margin-bottom: 15px;
+        margin-bottom: 1.5rem;
         cursor: pointer;
         &:hover {
           opacity: 0.8;
@@ -211,13 +246,14 @@ main {
 
       .price-desc {
         display: flex;
-        gap: 12px;
+        gap: 1.2rem;
         align-items: center;
         .discount {
-          padding: 10px;
-          font-size: 14px;
-          background-color: #61cdff;
-          border-radius: 10px;
+          padding: 1rem;
+          font-size: 1.4rem;
+          border-radius: 31% 69% 71% 29% / 35% 45% 55% 65%;
+          background: rgb(124,32,131);
+          background: linear-gradient(90deg, rgba(124,32,131,1) 0%, rgba(124,32,131,1) 38%, rgba(179,97,255,0.38699229691876746) 100%);
         }
       }
     }
@@ -229,7 +265,7 @@ main {
       width: 100%;
       height: 60%;
       object-fit: cover;
-      border-radius: 13px 13px 0 0;
+      border-radius: 1.3rem 1.3rem 0 0;
     }
 }
 
@@ -241,33 +277,50 @@ main {
   margin-top: $distance-with-top-section;
   margin-bottom: $distance-with-top-section;
   padding: 0 5rem;
+  width: 100%;
   header {
     color: white;
-    font-size: 50px;
+    font-size: 5rem;
     text-decoration: wavy white;
   }
   .news-card-container {
     width: 100%;
     display: flex;
-    gap: 20px;
-
+    gap: 2rem;
+      @media screen and (max-width: 1000px) {
+        align-items: center;
+        flex-direction: column;
+      }
     article {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       width: 50%;
-      font-size: 25px;
+      font-size: 2.5rem;
       color: whitesmoke;
       padding: 2rem;
-      border-radius: 15px;
+      border-radius: 1.5rem;
       background: rgb(18,18,18);
       background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 42%, rgba(97,205,255,0.13209033613445376) 100%);
+      -webkit-transition: background-color 400ms; /* For Safari */
+      transition: background-color 400ms; /* For modern browsers */
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(33, 71, 27);
+      }
+
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+      }
+
       a {
         color: black;
         text-decoration: none;
-        padding: 10px 15px;
+        padding: 1rem 1.5rem;
         background-color: $secondaty-color;
-        border-radius: 10px;
+        border-radius: 1rem;
         transition: transform 150ms;
         font-weight: bold;
 
@@ -277,12 +330,12 @@ main {
       }
 
       :not(h4) {
-        margin-left: 15px;
+        margin-left: 1.5rem;
       }
-
     }
   }
 }
+
 
 fa-icon {
   cursor: pointer;
