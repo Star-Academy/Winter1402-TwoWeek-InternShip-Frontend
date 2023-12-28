@@ -3,6 +3,8 @@ $secondaty-color: #61cdff;
 $main-body-background: #121212;
 $distance-with-top-section: 5rem;
 $global-font-size: 1.5rem;
+$footer-link-hover: #0078f2;
+$footer-background-color: #202020;
 
 
 @font-face {
@@ -28,7 +30,7 @@ html, body {
   height: 100%;
 }
 
-main {
+.main-body {
   width: 80%;
   display: flex;
   flex-direction: column;
