@@ -258,6 +258,10 @@ main {
       width: 50%;
       font-size: 25px;
       color: whitesmoke;
+      padding: 2rem;
+      border-radius: 15px;
+      background: rgb(18,18,18);
+      background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 42%, rgba(97,205,255,0.13209033613445376) 100%);
       a {
         color: black;
         text-decoration: none;
