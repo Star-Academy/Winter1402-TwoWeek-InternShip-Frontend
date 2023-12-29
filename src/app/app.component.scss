@@ -49,6 +49,9 @@
     border-radius: 0.5rem;
     color: whitesmoke;
     font-size: $global-font-size;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
 }
 
@@ -417,7 +420,7 @@ footer {
         }
 
         li {
-          font-size: $global-font-size;
+          font-size: $global-font-size ;
           padding-bottom: 0.4rem;
 
         }
