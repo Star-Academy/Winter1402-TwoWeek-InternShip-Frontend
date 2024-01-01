@@ -1,10 +1,10 @@
-$primary-color: #18181c;
-$secondaty-color: #61cdff;
-$main-body-background: #121212;
+$primary-color: hsl(240, 8%, 10%);
+$secondaty-color: hsl(199, 100%, 69%);
+$main-body-background: hsl(0, 0%, 7%);
 $distance-with-top-section: 5rem;
 $global-font-size: 1.5rem;
-$footer-link-hover: #0078f2;
-$footer-background-color: #202020;
+$footer-link-hover: hsl(210, 100%, 47%);
+$footer-background-color: hsl(0, 0%, 13%);
 
 
 @font-face {
@@ -33,25 +33,11 @@ html, body {
 
 .main-body {
   width: 80%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-}
-
-::-webkit-scrollbar {
-  width: 0.4rem;
-  height: 0.4rem;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
-  border-radius: 0.4rem;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 0.4rem;
-  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5);
 }
