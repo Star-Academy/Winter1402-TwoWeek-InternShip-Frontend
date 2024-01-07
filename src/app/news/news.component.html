@@ -3,15 +3,6 @@
     <h3>Latest News</h3>
   </header>
   <div class="news-card-container">
-    <article>
-      <h4>Website Maintainance</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur provident sequi temporibus. Atque dolor est fuga labore laborum quisquam reiciendis repellat rerum sit sunt. Fuga iste iure nobis quasi sequi.</p>
-      <a href="#">Read more</a>
-    </article>
-    <article>
-      <h4>Website Maintainance</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur provident sequi temporibus. Atque dolor est fuga labore laborum quisquam reiciendis repellat rerum sit sunt. Fuga iste iure nobis quasi sequi.</p>
-      <a href="#">Read more</a>
-    </article>
+    <app-news-card *ngFor="let specific_news of selected_news" [data]="specific_news"></app-news-card>
   </div>
 </section>

@@ -15,13 +15,13 @@ export class SalesComponent implements OnInit {
     { title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
     { title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
   ];
+  sale_title: string = "Holiday Sale"
 
   constructor() {
   }
 
   ngOnInit(): void {
   }
-
     protected readonly faArrowRight = faCircleArrowRight;
     protected readonly faArrowLeft = faCircleArrowLeft;
 }

@@ -9,6 +9,8 @@ import { SalesComponent } from './sales/sales.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
 import { SalesCardComponent } from './sales/sales-card/sales-card.component';
+import {NgOptimizedImage} from "@angular/common";
+import { NewsCardComponent } from './news/news-card/news-card.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { SalesCardComponent } from './sales/sales-card/sales-card.component';
     SalesComponent,
     FooterComponent,
     NewsComponent,
-    SalesCardComponent
+    SalesCardComponent,
+    NewsCardComponent
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
