@@ -1,1 +1,202 @@
-<h3>Hello World.</h3>
+<header class="header">
+  <section class="main-header-section">
+    <div class="log-nav-container">
+      <section class="logo-section">
+        <img src="assets/images/epic-logo.webp" alt="epic games logo" width="35" height="35">
+      </section>
+      <div class="main-header-divider">
+        <hr noshade size="1">
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#suggestions">Holiday Sales</a>
+          </li>
+          <li>
+            <a href="#news">News</a>
+          </li>
+        </ul>
+      </nav>
+      <input type="text" placeholder="Search">
+    </div>
+    <section class="user-preferences">
+      <a href="#" class="download-button-nav">Download Client</a>
+    </section>
+  </section>
+</header>
+
+<main class="main-body">
+  <section class="banner">
+    <div class="slideshow">
+      <img src="assets/images/battle-walp.webp">
+      <aside id="rightArrow">
+        <fa-icon [icon]="faArrowRight" size="2xl"></fa-icon>
+      </aside>
+      <aside id="leftArrow">
+        <fa-icon [icon]="faArrowLeft" size="2xl"></fa-icon>
+      </aside>
+    </div>
+    <div class="aside-games">
+      <div class="game-mini-cards">
+        <img src="assets/images/btlfield.webp">
+        <h3>Battle Field</h3>
+      </div>
+      <div class="game-mini-cards">
+        <img src="assets/images/assassin.webp">
+        <h4>Assasins Creed III</h4>
+      </div>
+      <div class="game-mini-cards">
+        <img src="assets/images/god-of-war.webp">
+        <h4>God of War</h4>
+      </div>
+      <div class="game-mini-cards">
+        <img src="assets/images/need4speed.webp">
+        <h4>Need for Speed</h4>
+      </div>
+    </div>
+  </section>
+  <section class="suggestions" id="suggestions">
+    <header>
+      <h1>Holiday Sale</h1>
+    </header>
+    <div class="slider-controller">
+      <fa-icon [icon]="faArrowLeft" size="2xl"></fa-icon>
+      <fa-icon [icon]="faArrowRight" size="2xl"></fa-icon>
+    </div>
+    <section class="full-game-list">
+      <div class="card">
+        <img src="assets/images/COD.webp" alt="call-of-duty-preview-card">
+        <h3>Call of Duty</h3>
+        <div class="price-desc">
+          <span class="discount">-4%</span>
+          <s>10.99$</s>
+          <strong>8.99$</strong>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/images/COD.webp" alt="call-of-duty-preview-card">
+        <h3>Call of Duty</h3>
+        <div class="price-desc">
+          <span class="discount">-4%</span>
+          <s>10.99$</s>
+          <strong>8.99$</strong>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/images/COD.webp" alt="call-of-duty-preview-card">
+        <h3>Call of Duty</h3>
+        <div class="price-desc">
+          <span class="discount">-4%</span>
+          <s>10.99$</s>
+          <strong>8.99$</strong>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/images/COD.webp" alt="call-of-duty-preview-card">
+        <h3>Call of Duty</h3>
+        <div class="price-desc">
+          <span class="discount">-4%</span>
+          <s>10.99$</s>
+          <strong>8.99$</strong>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section class="news-section" id="news">
+    <header>
+      <h3>Latest News</h3>
+    </header>
+    <div class="news-card-container">
+      <article>
+        <h4>Website Maintainance</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur provident sequi temporibus. Atque dolor est fuga labore laborum quisquam reiciendis repellat rerum sit sunt. Fuga iste iure nobis quasi sequi.</p>
+        <a href="#">Read more</a>
+      </article>
+      <article>
+        <h4>Website Maintainance</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur provident sequi temporibus. Atque dolor est fuga labore laborum quisquam reiciendis repellat rerum sit sunt. Fuga iste iure nobis quasi sequi.</p>
+        <a href="#">Read more</a>
+      </article>
+    </div>
+  </section>
+</main>
+<footer>
+  <section class="footer-top-container">
+    <section class="social-media">
+      <a href="#">
+        <fa-icon [icon]="faFacebook" size="xl"></fa-icon>
+      </a>
+      <a>
+        <fa-icon [icon]="faTwitter" size="xl"></fa-icon>
+      </a>
+      <a>
+        <fa-icon [icon]="faYoutube" size="xl"></fa-icon>
+      </a>
+    </section>
+    <button id="scrollToTop">
+      <fa-icon [icon]="faChevronUp" size="xl"></fa-icon>
+    </button>
+  </section>
+  <section class="footer-top-links">
+    <section class="resources">
+      <nav>
+        <header>
+          <h3>Resources</h3>
+        </header>
+        <main>
+          <ul>
+            <li><a href="#">Support-A-Creator</a></li>
+            <li><a href="#">Distribute on Epic Games</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Company</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Fan Art Policy</a></li>
+            <li><a href="#">UX Research</a></li>
+            <li><a href="#">Store EULA</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Online Services</a></li>
+            <li><a href="#">Community Rules</a></li>
+            <li><a href="#">Epic Newsroom</a></li>
+          </ul>
+        </main>
+      </nav>
+    </section>
+    <section class="products">
+      <nav>
+        <header>
+          <h3>Made By Epic Games</h3>
+        </header>
+        <main>
+          <ul>
+            <li><a href="#">Battle Breakers</a></li>
+            <li><a href="#">Fortnite</a></li>
+            <li><a href="#">Infinity Blade</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Robo Recall</a></li>
+            <li><a href="#">Shadow Complex</a></li>
+            <li><a href="#">Unreal Tournament</a></li>
+          </ul>
+        </main>
+      </nav>
+    </section>
+  </section>
+  <hr/>
+  <section class="copyright">
+    <p>
+      © 2023, Epic Games, Inc. All rights reserved. Epic, Epic Games, the Epic Games logo, Fortnite, the Fortnite logo,
+      Unreal, Unreal Engine, the Unreal Engine logo, Unreal Tournament, and the Unreal Tournament logo are trademarks or
+      registered trademarks of Epic Games, Inc. in the United States of America and elsewhere. Other brands or product
+      names are the trademarks of their respective owners.
+    </p>
+  </section>
+  <section class="footer-bottom-links">
+    <ul>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Store Refund Policy</a></li>
+    </ul>
+  </section>
+</footer>
