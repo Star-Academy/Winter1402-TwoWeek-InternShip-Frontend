@@ -11,6 +11,7 @@ import { NewsComponent } from './news/news.component';
 import { SalesCardComponent } from './sales/sales-card/sales-card.component';
 import {NgOptimizedImage} from "@angular/common";
 import { NewsCardComponent } from './news/news-card/news-card.component';
+import { AsideCardsComponent } from './banner/aside-cards/aside-cards.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NewsCardComponent } from './news/news-card/news-card.component';
     FooterComponent,
     NewsComponent,
     SalesCardComponent,
-    NewsCardComponent
+    NewsCardComponent,
+    AsideCardsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,21 +9,6 @@
     </aside>
   </div>
   <div class="aside-games">
-    <div class="game-mini-cards">
-      <img src="assets/images/btlfield.webp">
-      <h3>Battle Field</h3>
-    </div>
-    <div class="game-mini-cards">
-      <img src="assets/images/assassin.webp">
-      <h4>Assasins Creed III</h4>
-    </div>
-    <div class="game-mini-cards">
-      <img src="assets/images/god-of-war.webp">
-      <h4>God of War</h4>
-    </div>
-    <div class="game-mini-cards">
-      <img src="assets/images/need4speed.webp">
-      <h4>Need for Speed</h4>
-    </div>
+    <app-aside-cards *ngFor="let card of cards" [data]="card"></app-aside-cards>
   </div>
 </section>
