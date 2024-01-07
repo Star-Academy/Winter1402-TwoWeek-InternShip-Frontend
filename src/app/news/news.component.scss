@@ -1,0 +1,73 @@
+@import "../../styles";
+
+
+.news-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: $distance-with-top-section;
+  margin-block-end: $distance-with-top-section;
+  padding: 0 5rem;
+  inline-size: 100%;
+
+  header {
+    color: hsl(0, 0%, 100%);
+    font-size: 5rem;
+    text-decoration: wavy white;
+  }
+
+  .news-card-container {
+    inline-size: 100%;
+    display: flex;
+    gap: 2rem;
+
+    @media screen and (max-width: 1000px) {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    article {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      inline-size: 50%;
+      font-size: 2.5rem;
+      color: hsl(0, 0%, 96%);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      background: hsl(0, 0%, 7%);
+      background: linear-gradient(90deg, hsl(0, 0%, 7%) 0%, hsl(0, 0%, 7%) 42%, hsla(199, 100%, 69%, 0.13) 100%);
+      -webkit-transition: background-color 400ms; /* For Safari */
+      transition: background-color 400ms; /* For modern browsers */
+      cursor: pointer;
+
+      &:hover {
+        background-color: hsl(112, 45%, 19%);
+      }
+
+      @media screen and (max-width: 1000px) {
+        inline-size: 100%;
+      }
+
+      a {
+        color: hsl(0, 0%, 0%);
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        background-color: $secondaty-color;
+        border-radius: 1rem;
+        transition: transform 150ms;
+        font-weight: bold;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      :not(h4) {
+        margin-inline-start: 1.5rem;
+      }
+    }
+  }
+}

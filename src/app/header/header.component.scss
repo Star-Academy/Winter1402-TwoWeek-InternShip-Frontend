@@ -1,0 +1,91 @@
+@import "../../styles";
+
+.main-header-section {
+  display: flex;
+  color: hsl(0, 0%, 70%);
+  align-items: center;
+  inline-size: 100%;
+}
+
+.logo-section {
+  cursor: pointer;
+}
+
+.main-header-divider hr {
+  transform: rotate(90deg);
+  inline-size: 2rem;
+  border-radius: 4rem;
+  background-color: hsl(240, 4%, 20%);
+  color: hsl(240, 4%, 20%);
+  outline: none;
+}
+
+.log-nav-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  nav li a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  input {
+    padding: 1.2rem 2rem;
+    background-color: hsl(0, 0%, 13%);
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    color: whitesmoke;
+    font-size: $global-font-size;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+}
+
+.store-logo {
+  transform: translateY(-1px);
+}
+
+.main-header-section ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 2rem;
+  padding: 0;
+}
+
+.main-header-section ul li {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 300ms ease;
+}
+
+.main-header-section ul li:hover {
+  background-color: hsl(240, 3%, 26%);
+  color: white;
+
+}
+
+.user-preferences {
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-preferences a {
+  text-decoration: none;
+}
+
+.download-button-nav {
+  cursor: pointer;
+  color: black;
+  background-color: $secondaty-color;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.6rem;
+  border: none;
+  outline: none;
+}

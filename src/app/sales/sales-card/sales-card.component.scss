@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  inline-size: 25rem;
+  block-size: 34rem;
+  border-radius: 1.5rem;
+  background-color: inherit;
+  color: hsl(0, 0%, 96%);
+
+  img {
+    inline-size: 100%;
+    block-size: 60%;
+    object-fit: cover;
+    border-radius: 1.3rem 1.3rem 0 0;
+    margin-block-end: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .price-desc {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+
+    .discount {
+      padding: 1rem;
+      font-size: 1.4rem;
+      border-radius: 31% 69% 71% 29% / 35% 45% 55% 65%;
+      background: hsl(296, 61%, 32%);
+      background: linear-gradient(90deg, hsl(296, 61%, 32%) 0%, hsl(296, 61%, 32%) 38%, hsla(271, 100%, 69%, 0.38) 100%);
+    }
+  }
+}

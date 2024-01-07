@@ -1,0 +1,9 @@
+<div class="card">
+  <img src="{{data.imageSrc}}" alt="call-of-duty-preview-card">
+  <h3>{{data.title}}</h3>
+  <div class="price-desc">
+    <span class="discount">-{{data.discount}}%</span>
+    <s>{{data.price}}$</s>
+    <strong>{{data.price * ((100 - data.discount)/100)}}$</strong>
+  </div>
+</div>

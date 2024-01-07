@@ -41,3 +41,11 @@ html, body {
   margin-right: auto;
   margin-left: auto;
 }
+
+fa-icon {
+  cursor: pointer;
+  color: hsl(0, 0%, 84%);
+  box-shadow: 10px 9px 17px -10px hsl(0, 0%, 0%);
+  -webkit-box-shadow: 10px 9px 17px -10px hsl(0, 0%, 0%);
+  -moz-box-shadow: 10px 9px 17px -10px hsl(0, 0%, 0%);
+}

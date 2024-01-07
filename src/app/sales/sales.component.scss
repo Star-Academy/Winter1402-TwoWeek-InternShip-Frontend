@@ -1,0 +1,36 @@
+@import "../../styles";
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  inline-size: 100%;
+  margin-block-start: $distance-with-top-section;
+  gap: 1rem;
+  font-size: $global-font-size;
+
+  header {
+    color: hsl(0, 0%, 100%);
+    font-size: 4rem;
+  }
+
+  .slider-controller {
+    display: flex;
+    inline-size: 100%;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+
+  .full-game-list {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    align-items: center;
+    inline-size: 100%;
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+}
+
+
