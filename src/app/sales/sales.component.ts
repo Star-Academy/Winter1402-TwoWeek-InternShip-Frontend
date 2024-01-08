@@ -1,27 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {faCircleArrowLeft, faCircleArrowRight} from "@fortawesome/free-solid-svg-icons";
-
-type SalesData = { title: string, discount: number, price: number, imageSrc: string };
+import { salesData } from "../../models/types";
 
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
   styleUrls: ['./sales.component.scss']
 })
-export class SalesComponent implements OnInit {
-  sales_data: SalesData[] = [
-    { title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
-    { title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
-    { title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
-    { title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
+export class SalesComponent {
+  protected readonly faArrowRight = faCircleArrowRight;
+  protected readonly faArrowLeft = faCircleArrowLeft;
+  public salesData: salesData[] = [
+    { id: 1, title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 2, title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 3, title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 4, title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
   ];
-  sale_title: string = "Holiday Sale"
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-    protected readonly faArrowRight = faCircleArrowRight;
-    protected readonly faArrowLeft = faCircleArrowLeft;
+  public salesTitle: string = "Holiday Sale"
 }

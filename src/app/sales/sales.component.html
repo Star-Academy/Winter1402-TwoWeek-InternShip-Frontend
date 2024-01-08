@@ -1,12 +1,12 @@
 <section class="suggestions" id="suggestions">
   <header>
-    <h1>{{ sale_title }}</h1>
+    <h1>{{ salesTitle }}</h1>
   </header>
   <div class="slider-controller">
     <fa-icon [icon]="faArrowLeft" size="2xl"></fa-icon>
     <fa-icon [icon]="faArrowRight" size="2xl"></fa-icon>
   </div>
   <section class="full-game-list">
-    <app-sales-card *ngFor="let sales of sales_data;" [data]="sales"></app-sales-card>
+    <app-sales-card *ngFor="let sales of salesData;" [data]="sales"></app-sales-card>
   </section>
 </section>

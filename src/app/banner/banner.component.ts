@@ -1,25 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {faCircleArrowLeft, faCircleArrowRight} from "@fortawesome/free-solid-svg-icons";
-
-type aside_cards = {title: string, imageURL: string}
+import { asideCards } from "../../models/types";
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss']
 })
-export class BannerComponent implements OnInit {
-  cards: aside_cards[] = [
-    { title: "Battle Field", imageURL: "assets/images/btlfield.webp" },
-    { title: "Assassins Creed III", imageURL: "assets/images/assassin.webp" },
-    { title: "God of War", imageURL: "assets/images/god-of-war.webp" },
-    { title: "Need for Speed", imageURL: "assets/images/need4speed.webp" },
+export class BannerComponent {
+  protected readonly faArrowRight = faCircleArrowRight;
+  protected readonly faArrowLeft = faCircleArrowLeft;
+  public cards: asideCards[] = [
+    { id: 1, title: "Battle Field", asideImageURL: "assets/images/btlfield.webp" },
+    { id: 2, title: "Assassins Creed III", asideImageURL: "assets/images/assassin.webp" },
+    { id: 3, title: "God of War", asideImageURL: "assets/images/god-of-war.webp" },
+    { id: 4, title: "Need for Speed", asideImageURL: "assets/images/need4speed.webp" },
   ]
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-    protected readonly faArrowRight = faCircleArrowRight;
-    protected readonly faArrowLeft = faCircleArrowLeft;
 }
