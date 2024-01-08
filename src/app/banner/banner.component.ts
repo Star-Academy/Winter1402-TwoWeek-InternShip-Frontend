@@ -10,10 +10,38 @@ import { asideCards } from "../../models/types";
 export class BannerComponent {
   protected readonly faArrowRight = faCircleArrowRight;
   protected readonly faArrowLeft = faCircleArrowLeft;
+  private activeBannerID: number;
   public cards: asideCards[] = [
-    { id: 1, title: "Battle Field", asideImageURL: "assets/images/btlfield.webp" },
-    { id: 2, title: "Assassins Creed III", asideImageURL: "assets/images/assassin.webp" },
-    { id: 3, title: "God of War", asideImageURL: "assets/images/god-of-war.webp" },
-    { id: 4, title: "Need for Speed", asideImageURL: "assets/images/need4speed.webp" },
+    { id: 1, title: "Battle Field", asideImageURL: "assets/images/btlfield.webp", bannerImage: "assets/images/battle-walp.webp" },
+    { id: 2, title: "Assassins Creed III", asideImageURL: "assets/images/assassin.webp", bannerImage: "assets/images/assasin-wallp.webp" },
+    { id: 3, title: "God of War", asideImageURL: "assets/images/god-of-war.webp", bannerImage: "assets/images/godofwar-wallp.webp" },
+    { id: 4, title: "Need for Speed", asideImageURL: "assets/images/need4speed.webp", bannerImage: "assets/images/need4speed-wallp.webp" },
   ]
+  public activeBanner: asideCards;
+
+  constructor() {
+    this.activeBannerID = 0;
+    this.activeBanner = this.cards[this.activeBannerID];
+  }
+  public moveFunction(movement: "prev" | "next") :void {
+    if (movement === "next") {
+      if (this.activeBannerID < this.cards.length - 1) {
+        this.activeBannerID += 1;
+      }
+    }
+    else if (movement === "prev") {
+      if (this.activeBannerID > 0) {
+        this.activeBannerID -= 1;
+      }
+      else
+        return;
+    }
+    this.activeBanner = this.cards[this.activeBannerID]
+  }
+
+  public asideClicked(clickedItemID: number) : void {
+    this.activeBannerID = clickedItemID - 1;
+    this.activeBanner = this.cards[this.activeBannerID]
+  }
+
 }

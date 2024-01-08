@@ -1,14 +1,14 @@
 <section class="banner">
   <div class="slideshow">
-    <img src="assets/images/battle-walp.webp">
+    <img src="{{ activeBanner.bannerImage }}">
     <aside id="rightArrow">
-      <fa-icon [icon]="faArrowRight" size="2xl"></fa-icon>
+      <fa-icon [icon]="faArrowRight" size="2xl" (click)="moveFunction('next')"></fa-icon>
     </aside>
     <aside id="leftArrow">
-      <fa-icon [icon]="faArrowLeft" size="2xl"></fa-icon>
+      <fa-icon [icon]="faArrowLeft" size="2xl" (click)="moveFunction('prev')"></fa-icon>
     </aside>
   </div>
   <div class="aside-games">
-    <app-aside-cards *ngFor="let card of cards" [data]="card"></app-aside-cards>
+    <app-aside-cards [ngClass]="{'activeAside': card.id === activeBanner.id}" *ngFor="let card of cards" [data]="card" (click)="asideClicked(card.id)"></app-aside-cards>
   </div>
 </section>

@@ -61,7 +61,7 @@
     inline-size: auto;
     overflow-x: auto;
 
-    :first-child {
+    .activeAside {
       background-color: hsla(0, 0%, 72%, 0.2) !important;
       border-radius: 2rem;
     }
