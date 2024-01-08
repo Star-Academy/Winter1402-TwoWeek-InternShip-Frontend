@@ -25,9 +25,7 @@ export class BannerComponent {
   }
   public moveFunction(movement: "prev" | "next") :void {
     if (movement === "next") {
-      if (this.activeBannerID < this.cards.length - 1) {
-        this.activeBannerID += 1;
-      }
+        this.activeBannerID = (this.activeBannerID + 1) % this.cards.length;
     }
     else if (movement === "prev") {
       if (this.activeBannerID > 0) {
