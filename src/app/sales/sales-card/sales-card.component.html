@@ -1,9 +1,9 @@
 <div class="card">
-  <img src="{{data.imageSrc}}" alt="preview-card">
-  <h3>{{data.title}}</h3>
+  <img src="{{shownData.imageSrc}}" alt="preview-card">
+  <h3>{{shownData.title}}</h3>
   <div class="price-desc">
-    <span class="discount">-{{data.discount}}%</span>
-    <s>{{data.price}}$</s>
-    <strong>{{data.price * ((100 - data.discount)/100)}}$</strong>
+    <span class="discount">-{{shownData.discount}}%</span>
+    <s>{{shownData.price}}$</s>
+    <strong>{{ calculatedWithDiscount }}$</strong>
   </div>
 </div>

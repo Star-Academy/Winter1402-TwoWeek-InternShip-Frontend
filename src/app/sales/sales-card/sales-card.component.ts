@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import { salesData } from "../../../models/types";
 
 @Component({
   selector: 'app-sales-card',
@@ -6,10 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./sales-card.component.scss']
 })
 export class SalesCardComponent implements OnInit {
-  @Input() data!: { title: string; discount: number; price: number; imageSrc: string };
-  constructor() { }
+  @Input() public shownData!: salesData;
+  public calculatedWithDiscount: number = 0;
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.calculatedWithDiscount = this.shownData.price * ((100 - this.shownData.discount)/100)
   }
 
 }

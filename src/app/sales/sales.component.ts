@@ -7,14 +7,53 @@ import { salesData } from "../../models/types";
   templateUrl: './sales.component.html',
   styleUrls: ['./sales.component.scss']
 })
-export class SalesComponent {
+export class SalesComponent  {
   protected readonly faArrowRight = faCircleArrowRight;
   protected readonly faArrowLeft = faCircleArrowLeft;
-  public salesData: salesData[] = [
-    { id: 1, title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
-    { id: 2, title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
-    { id: 3, title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
-    { id: 4, title: "Call of duty", discount: 4, price: 12, imageSrc: "assets/images/COD.webp" },
+  private salesData: salesData[] = [
+    { id: 1, title: "Call of duty", discount: 2, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 2, title: "Call of duty", discount: 9, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 3, title: "Call of duty", discount: 12, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 4, title: "Call of duty", discount: 25, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 5, title: "Call of duty", discount: 10, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 6, title: "Call of duty", discount: 99, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 7, title: "Call of duty", discount: 32, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 8, title: "Call of duty", discount: 15, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 9, title: "Call of duty", discount: 12, price: 12, imageSrc: "assets/images/COD.webp" },
+    { id: 10, title: "Call of duty", discount: 11, price: 12, imageSrc: "assets/images/COD.webp" },
   ];
-  public salesTitle: string = "Holiday Sale"
+  private readonly maximumShowSize: number = 4;
+  public showSalesData: salesData[];
+  public salesTitle: string = "Holiday Sale";
+  public shownSaleID: number;
+
+  constructor() {
+    this.shownSaleID = 0;
+    this.showSalesData = [...this.salesData].slice(0, this.maximumShowSize)
+  }
+  private changeSalesDataArray() : void {
+    const startIndex = this.shownSaleID;
+    const endIndex = startIndex + this.maximumShowSize;
+    if (endIndex <= this.salesData.length) {
+      this.showSalesData = this.salesData.slice(startIndex, endIndex);
+    } else {
+      this.showSalesData = this.salesData.slice(0, this.maximumShowSize);
+      this.shownSaleID = 0;
+    }
+  }
+
+  public moveFunction(movement: "left" | "right") :void {
+    if (movement === "left") {
+      this.shownSaleID += 1;
+    }
+    else if (movement === "right") {
+      if (this.shownSaleID > 0) {
+        this.shownSaleID -= 1;
+      }
+      else
+        return;
+    }
+    this.changeSalesDataArray();
+  }
+
 }
