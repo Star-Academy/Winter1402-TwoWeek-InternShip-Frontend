@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {faCircleArrowLeft, faCircleArrowRight} from "@fortawesome/free-solid-svg-icons";
-import { salesData } from "../../models/types";
+import { SalesData } from "../../models/types";
 
 @Component({
   selector: 'app-sales',
@@ -10,7 +10,7 @@ import { salesData } from "../../models/types";
 export class SalesComponent  {
   protected readonly faArrowRight = faCircleArrowRight;
   protected readonly faArrowLeft = faCircleArrowLeft;
-  private salesData: salesData[] = [
+  private salesData: SalesData[] = [
     { id: 1, title: "Call of duty", discount: 2, price: 12, imageSrc: "assets/images/COD.webp" },
     { id: 2, title: "Call of duty", discount: 9, price: 12, imageSrc: "assets/images/COD.webp" },
     { id: 3, title: "Call of duty", discount: 12, price: 12, imageSrc: "assets/images/COD.webp" },
@@ -23,7 +23,7 @@ export class SalesComponent  {
     { id: 10, title: "Call of duty", discount: 11, price: 12, imageSrc: "assets/images/COD.webp" },
   ];
   private readonly maximumShowSize: number = 4;
-  public showSalesData: salesData[];
+  public showSalesData: SalesData[];
   public salesTitle: string = "Holiday Sale";
   public shownSaleID: number;
 

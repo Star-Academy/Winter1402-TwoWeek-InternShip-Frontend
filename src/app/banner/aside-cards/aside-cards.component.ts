@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { asideCards } from "../../../models/types";
+import { AsideCard } from "../../../models/types";
 
 @Component({
   selector: 'app-aside-cards',
@@ -7,5 +7,5 @@ import { asideCards } from "../../../models/types";
   styleUrls: ['./aside-cards.component.scss']
 })
 export class AsideCardsComponent {
-  @Input() public data!: asideCards;
+  @Input() public data!: AsideCard;
 }

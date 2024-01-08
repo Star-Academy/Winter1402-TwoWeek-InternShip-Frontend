@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { newsData } from "../../../models/types";
+import { NewsData } from "../../../models/types";
 
 @Component({
   selector: 'app-news-card',
@@ -7,5 +7,5 @@ import { newsData } from "../../../models/types";
   styleUrls: ['./news-card.component.scss']
 })
 export class NewsCardComponent {
-  @Input() public data!: newsData;
+  @Input() public data!: NewsData;
 }

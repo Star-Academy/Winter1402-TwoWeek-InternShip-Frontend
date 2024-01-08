@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {faCircleArrowLeft, faCircleArrowRight} from "@fortawesome/free-solid-svg-icons";
-import { asideCards } from "../../models/types";
+import { AsideCard } from "../../models/types";
 
 @Component({
   selector: 'app-banner',
@@ -11,13 +11,13 @@ export class BannerComponent {
   protected readonly faArrowRight = faCircleArrowRight;
   protected readonly faArrowLeft = faCircleArrowLeft;
   private activeBannerID: number;
-  public cards: asideCards[] = [
+  public cards: AsideCard[] = [
     { id: 1, title: "Battle Field", asideImageURL: "assets/images/btlfield.webp", bannerImage: "assets/images/battle-walp.webp" },
     { id: 2, title: "Assassins Creed III", asideImageURL: "assets/images/assassin.webp", bannerImage: "assets/images/assasin-wallp.webp" },
     { id: 3, title: "God of War", asideImageURL: "assets/images/god-of-war.webp", bannerImage: "assets/images/godofwar-wallp.webp" },
     { id: 4, title: "Need for Speed", asideImageURL: "assets/images/need4speed.webp", bannerImage: "assets/images/need4speed-wallp.webp" },
   ]
-  public activeBanner: asideCards;
+  public activeBanner: AsideCard;
 
   constructor() {
     this.activeBannerID = 0;

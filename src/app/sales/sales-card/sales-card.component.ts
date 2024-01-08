@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { salesData } from "../../../models/types";
+import { SalesData } from "../../../models/types";
 
 @Component({
   selector: 'app-sales-card',
@@ -7,7 +7,7 @@ import { salesData } from "../../../models/types";
   styleUrls: ['./sales-card.component.scss']
 })
 export class SalesCardComponent implements OnInit {
-  @Input() public shownData!: salesData;
+  @Input() public shownData!: SalesData;
   public calculatedWithDiscount: number = 0;
 
   ngOnInit() {
