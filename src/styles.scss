@@ -7,15 +7,8 @@ $footer-link-hover: hsl(210, 100%, 47%);
 $footer-background-color: hsl(0, 0%, 13%);
 
 
-@font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/LATO-REGULAR.TTF') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
-  font-family: Lato;
+  font-family: 'Vazirmatn', sans-serif;
 }
 
 body {
@@ -29,6 +22,7 @@ html, body {
   font-size: 62.5%;
   scroll-behavior: smooth;
   height: 100%;
+  direction: rtl;
 }
 
 .main-body {
@@ -40,4 +34,19 @@ html, body {
   align-items: center;
   margin-right: auto;
   margin-left: auto;
+
+  app-sales {
+    width: 100%;
+  }
+  app-banner {
+    width: 100%;
+  }
+}
+
+fa-icon {
+  cursor: pointer;
+  color: hsl(0, 0%, 84%);
+  box-shadow: 10px 9px 17px -10px hsl(0, 0%, 0%);
+  -webkit-box-shadow: 10px 9px 17px -10px hsl(0, 0%, 0%);
+  -moz-box-shadow: 10px 9px 17px -10px hsl(0, 0%, 0%);
 }

@@ -1,0 +1,14 @@
+<section class="banner">
+  <div class="slideshow">
+    <img src="{{ activeBanner.bannerImage }}">
+    <aside id="rightArrow">
+      <fa-icon [icon]="faArrowLeft" size="2xl" (click)="movePrevious()"></fa-icon>
+    </aside>
+    <aside id="leftArrow">
+      <fa-icon [icon]="faArrowRight" size="2xl" (click)="moveNext()"></fa-icon>
+    </aside>
+  </div>
+  <div class="aside-games">
+    <app-aside-cards [ngClass]="{'activeAside': card.id === activeBanner.id}" *ngFor="let card of cards" [data]="card" (click)="asideClicked(card.id)"></app-aside-cards>
+  </div>
+</section>
