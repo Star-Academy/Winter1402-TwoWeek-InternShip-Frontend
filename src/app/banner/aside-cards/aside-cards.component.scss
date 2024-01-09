@@ -1,5 +1,6 @@
 .game-mini-cards {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: center;
   inline-size: auto;

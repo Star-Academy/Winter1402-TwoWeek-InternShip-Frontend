@@ -4,6 +4,7 @@
 .banner {
   margin-block-start: $distance-with-top-section;
   display: inline-flex;
+  flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: center;
   inline-size: 100%;
