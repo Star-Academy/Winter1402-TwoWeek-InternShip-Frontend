@@ -1,9 +1,9 @@
 <div class="card">
   <img src="{{shownData.imageSrc}}" alt="preview-card">
-  <h3>{{shownData.title}} - {{ shownData.id }}</h3>
+  <h3>{{shownData.title}}</h3>
   <div class="price-desc">
-    <span class="discount">{{shownData.discount}}%</span>
-    <s>{{shownData.price}}$</s>
-    <strong>{{ calculatedWithDiscount }}$</strong>
+    <span class="discount">{{ shownData.discount | persianNumber }}%</span>
+    <s>{{ shownData.price | persianNumber }}  تومان</s>
+    <strong>{{ calculatedWithDiscount | persianNumber }}  تومان</strong>
   </div>
 </div>

@@ -2,8 +2,8 @@
 
 .header {
   padding: 0 3rem;
-  background: hsl(0, 0%, 7%);
-  background: linear-gradient(90deg, hsl(0, 0%, 7%) 0%, hsl(0, 0%, 7%) 42%, hsla(199, 100%, 69%, 0.13) 100%);
+  background: hsl(199, 100%, 69%);
+  background: linear-gradient(90deg, hsla(199, 100%, 69%, 0.15) 0%, hsl(0, 0%, 7%) 42%, hsl(0, 0%, 7%) 100%);
   backdrop-filter: blur(2.5rem);
   position: sticky;
   inset-block-start: 0;

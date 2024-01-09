@@ -12,6 +12,7 @@ import { SalesCardComponent } from './sales/sales-card/sales-card.component';
 import {NgOptimizedImage} from "@angular/common";
 import { NewsCardComponent } from './news/news-card/news-card.component';
 import { AsideCardsComponent } from './banner/aside-cards/aside-cards.component';
+import { PersianNumberPipe } from './pipes/persian-number.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AsideCardsComponent } from './banner/aside-cards/aside-cards.component'
     NewsComponent,
     SalesCardComponent,
     NewsCardComponent,
-    AsideCardsComponent
+    AsideCardsComponent,
+    PersianNumberPipe
   ],
   imports: [
     BrowserModule,
