@@ -23,23 +23,22 @@ export class BannerComponent {
     this.activeBannerID = 0;
     this.activeBanner = this.cards[this.activeBannerID];
   }
-  public moveFunction(movement: "prev" | "next") :void {
-    if (movement === "next") {
-        this.activeBannerID = (this.activeBannerID + 1) % this.cards.length;
-    }
-    else if (movement === "prev") {
-      if (this.activeBannerID > 0) {
-        this.activeBannerID -= 1;
-      }
-      else
-        return;
-    }
-    this.activeBanner = this.cards[this.activeBannerID]
-  }
-
   public asideClicked(clickedItemID: number) : void {
     this.activeBannerID = clickedItemID - 1;
     this.activeBanner = this.cards[this.activeBannerID]
   }
 
+  moveNext() {
+    this.activeBannerID = (this.activeBannerID + 1) % this.cards.length;
+    this.afterMove();
+  }
+
+  movePrevious() {
+    this.activeBannerID = (this.activeBannerID + this.cards.length - 1) % this.cards.length;
+    this.afterMove();
+  }
+
+  afterMove() {
+    this.activeBanner = this.cards[this.activeBannerID]
+  }
 }

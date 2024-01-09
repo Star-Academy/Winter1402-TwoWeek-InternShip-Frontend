@@ -2,10 +2,10 @@
   <div class="slideshow">
     <img src="{{ activeBanner.bannerImage }}">
     <aside id="rightArrow">
-      <fa-icon [icon]="faArrowRight" size="2xl" (click)="moveFunction('next')"></fa-icon>
+      <fa-icon [icon]="faArrowRight" size="2xl" (click)="moveNext()"></fa-icon>
     </aside>
     <aside id="leftArrow">
-      <fa-icon [icon]="faArrowLeft" size="2xl" (click)="moveFunction('prev')"></fa-icon>
+      <fa-icon [icon]="faArrowLeft" size="2xl" (click)="movePrevious()"></fa-icon>
     </aside>
   </div>
   <div class="aside-games">
