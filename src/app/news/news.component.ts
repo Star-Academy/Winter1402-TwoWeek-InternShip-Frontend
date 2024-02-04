@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NewsData} from "../../models/types";
-import {NewsDataProviderService} from "./services/news-data-provider.service";
+import {NewsFunctionsService} from "./services/news-services/news-handler.service";
 
 @Component({
   selector: 'app-news',
@@ -8,10 +8,10 @@ import {NewsDataProviderService} from "./services/news-data-provider.service";
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
-  public news: NewsData[] = [];
-  public selectedNews: NewsData[] = [];
+  protected news: NewsData[] = [];
+  protected selectedNews: NewsData[] = [];
 
-  constructor(private dataProviderService: NewsDataProviderService) {
+  constructor(private dataProviderService: NewsFunctionsService) {
   }
 
   ngOnInit(): void {
