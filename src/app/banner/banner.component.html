@@ -9,6 +9,6 @@
     </aside>
   </div>
   <div class="aside-games">
-    <app-aside-cards [ngClass]="{'activeAside': card.id === activeBanner.id}" *ngFor="let card of cards" [data]="card" (click)="asideClicked(card.id)"></app-aside-cards>
+    <app-aside-cards [id]="card.id" [ngClass]="{'activeAside': card.id === activeBanner.id}" *ngFor="let card of cards" [data]="card" (click)="asideClicked(card.id)"></app-aside-cards>
   </div>
 </section>

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {faCircleArrowLeft, faCircleArrowRight} from "@fortawesome/free-solid-svg-icons";
 import {AsideCard} from "../../models/types";
 import {BannerDataProviderService} from "./services/banner-data-provider.service";
@@ -11,9 +11,11 @@ import {BannerDataProviderService} from "./services/banner-data-provider.service
 export class BannerComponent {
   protected readonly faArrowRight = faCircleArrowRight;
   protected readonly faArrowLeft = faCircleArrowLeft;
-  private activeBannerID: number;
-  public cards: AsideCard[];
-  public activeBanner: AsideCard;
+  private activeBannerID: number = 0;
+  public cards: AsideCard[] = [];
+  public activeBanner: AsideCard = {bannerImage: "", title: "", asideImageURL: "", id: 0};
+
+
 
   constructor(private bannerDataProviderService: BannerDataProviderService) {
     this.activeBannerID = 0;
