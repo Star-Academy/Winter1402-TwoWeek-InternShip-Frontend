@@ -3,7 +3,7 @@ import { AsideCardsComponent } from './aside-cards.component';
 import {AsideCard} from "../../../models/types";
 import {By} from "@angular/platform-browser";
 
-fdescribe('AsideCardsComponent', () => {
+describe('AsideCardsComponent', () => {
   const MOCKED_DATA: AsideCard = {
     bannerImage: "FAKED_IMAGE",
     title: "FAKED_TITLE",

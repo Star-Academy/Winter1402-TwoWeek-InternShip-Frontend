@@ -8,7 +8,7 @@ import {NewsFunctionsService} from "./services/news-services/news-handler.servic
 import SpyObj = jasmine.SpyObj;
 
 
-fdescribe('NewsComponent', () => {
+describe('NewsComponent', () => {
   let component: NewsComponent;
   let fixture: ComponentFixture<NewsComponent>;
   let MOCKED_DATA_SERVICE: SpyObj<NewsDataService>;

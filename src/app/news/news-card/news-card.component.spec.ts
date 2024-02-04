@@ -3,7 +3,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {NewsCardComponent} from './news-card.component';
 import {NewsData} from "../../../models/types";
 
-fdescribe('NewsCardComponent', () => {
+describe('NewsCardComponent', () => {
   const MOCKED_DATA: NewsData = {
     id: 2,
     title: "MOCKED_TITLE",

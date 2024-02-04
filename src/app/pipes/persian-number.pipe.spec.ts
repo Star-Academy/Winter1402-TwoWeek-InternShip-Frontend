@@ -1,6 +1,6 @@
 import {PersianNumberPipe} from "./persian-number.pipe";
 
-fdescribe('Persianize number Test', () => {
+describe('Persianize number Test', () => {
   let persian_pipe: PersianNumberPipe;
 
   beforeEach(() => {

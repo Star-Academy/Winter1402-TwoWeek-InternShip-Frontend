@@ -6,7 +6,7 @@ import createSpyObj = jasmine.createSpyObj;
 import {DateConverter} from "../convert-date-to-second/convert-date-to-second.service";
 import {NewsData} from "../../../../models/types";
 
-fdescribe('NewsHandlerService', () => {
+describe('NewsHandlerService', () => {
   let service: NewsFunctionsService;
   let MOCKED_NEWS_DATA: jasmine.SpyObj<NewsDataService>;
   let MOCKED_DATE_CONVERTER: jasmine.SpyObj<DateConverter>

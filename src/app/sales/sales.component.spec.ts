@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SalesComponent } from './sales.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {MockComponent} from "ng-mocks";
+import {SalesCardComponent} from "./sales-card/sales-card.component";
 
 describe('SalesComponent', () => {
   let component: SalesComponent;
@@ -8,7 +11,8 @@ describe('SalesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SalesComponent ]
+      declarations: [ SalesComponent, MockComponent(SalesCardComponent) ],
+      imports: [FontAwesomeModule]
     })
     .compileComponents();
 

@@ -13,7 +13,7 @@ class MockAsideCards {
   public data: any;
 }
 
-fdescribe('BannerComponent', () => {
+describe('BannerComponent', () => {
   let component: BannerComponent;
   let fixture: ComponentFixture<BannerComponent>;
   let BannerDataServiceMocked: jasmine.SpyObj<BannerDataProviderService>;

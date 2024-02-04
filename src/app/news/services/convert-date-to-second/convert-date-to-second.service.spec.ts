@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { DateConverter } from './convert-date-to-second.service';
 
-fdescribe('ConvertDateToSecondService', () => {
+describe('ConvertDateToSecondService', () => {
   let service: DateConverter;
 
   beforeEach(() => {
