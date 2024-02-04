@@ -3,7 +3,7 @@ import {CARDS, BannerDataProviderService} from "./banner-data-provider.service";
 import {AsideCard} from "../../../models/types";
 
 
-fdescribe("Get all aside cards test", () => {
+describe("Get all aside cards test", () => {
   let instance: BannerDataProviderService;
   beforeEach(() => {
     TestBed.configureTestingModule({
