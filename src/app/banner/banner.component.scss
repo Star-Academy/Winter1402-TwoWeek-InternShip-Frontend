@@ -1,0 +1,75 @@
+@import "../../styles";
+
+
+.banner {
+  margin-block-start: $distance-with-top-section;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  inline-size: 100%;
+  gap: 4rem;
+  font-size: $global-font-size;
+
+  @media screen and (max-width: 1400px) {
+    flex-direction: column;
+  }
+
+  .slideshow {
+    position: relative;
+    inline-size: 80%;
+
+    @media screen and (max-width: 1000px) {
+      inline-size: 100%;
+    }
+
+    img {
+      inline-size: 100%;
+      block-size: 80vh;
+      object-fit: cover;
+      border-radius: 2rem;
+    }
+
+    #rightArrow {
+      position: absolute;
+      inset-block-start: 50%;
+      inset-block-end: 50%;
+      inset-inline-end: 1rem;
+      transition: all 300ms ease;
+
+      &:hover {
+        scale: 1.05;
+      }
+
+    }
+
+    #leftArrow {
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline-start: 1rem;
+      transition: all 300ms ease;
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
+  }
+
+  .aside-games {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    inline-size: auto;
+    overflow-x: auto;
+
+    .activeAside {
+      background-color: hsla(0, 0%, 72%, 0.2) !important;
+      border-radius: 2rem;
+    }
+
+    @media screen and (max-width: 1400px) {
+      flex-direction: row;
+      inline-size: 100%;
+    }
+  }
+}

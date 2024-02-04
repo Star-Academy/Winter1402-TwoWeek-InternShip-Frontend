@@ -1,0 +1,28 @@
+@import "../../styles";
+
+
+.news-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: $distance-with-top-section;
+  margin-block-end: $distance-with-top-section;
+  inline-size: 100%;
+  header {
+    color: hsl(0, 0%, 100%);
+    font-size: 5rem;
+    text-decoration: wavy white;
+  }
+
+  .news-card-container {
+    inline-size: 100%;
+    display: flex;
+    gap: 2rem;
+
+    @media screen and (max-width: 1000px) {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
